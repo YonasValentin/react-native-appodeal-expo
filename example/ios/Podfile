@@ -1,7 +1,7 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-platform :ios, '13.0'
+platform :ios, '15.1'
 install! 'cocoapods', :deterministic_uuids => false
 
 source 'https://cdn.cocoapods.org'
@@ -143,10 +143,10 @@ post_install do |installer|
     installer,
     :mac_catalyst_enabled => false,
   )
-  # Switch deployment targets to 13.0
+  # Switch deployment targets to 15.1
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
-      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "13.0"
+      config.build_settings["IPHONEOS_DEPLOYMENT_TARGET"] = "15.1"
     end
   end
   # Apply XCode 12.5 M1 patch

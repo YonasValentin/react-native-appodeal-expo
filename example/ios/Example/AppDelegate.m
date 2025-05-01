@@ -1,8 +1,8 @@
 #import "AppDelegate.h"
 
-#import <React/RCTBridge.h>
-#import <React/RCTBundleURLProvider.h>
-#import <React/RCTRootView.h>
+#import "RCTBridge.h"
+#import "RCTBundleURLProvider.h"
+#import "RCTRootView.h"
 
 #if DEBUG && __has_include(<FlipperKit/FlipperClient.h>)
 #define FLIPPER 1

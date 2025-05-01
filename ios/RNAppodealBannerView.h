@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <React/RCTBridge.h>
-#import <React/RCTView.h>
+#import "RCTBridge.h"
+#import "RCTView.h"
 #import <Appodeal/Appodeal.h>
 
 

@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.homepage     = "https://appodeal.com"
   s.license      = "MIT"
   s.author       = { "author" => "appodeal.com" }
-  s.platform     = :ios, "13.0"
+  s.platform     = :ios, "15.1"
   s.source       = { :git => package['repository']['url'], :tag => "master" }
   s.source_files = "ios/**/*.{h,m}"
   

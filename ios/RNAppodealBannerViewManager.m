@@ -9,10 +9,9 @@
 #import "RNAppodealBannerViewManager.h"
 #import "RNAppodealBannerView.h"
 
-#import <React/RCTBridge.h>
-#import <React/RCTUIManager.h>
-#import <React/RCTEventDispatcher.h>
-
+#import "RCTBridge.h"
+#import "RCTUIManager.h"
+#import "RCTEventDispatcher.h"
 
 @implementation RNAppodealBannerViewManager
 

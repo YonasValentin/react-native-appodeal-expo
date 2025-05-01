@@ -17,6 +17,8 @@ public class RNAppodealPackage implements ReactPackage {
     @NonNull
     @Override
     public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
+        // TODO: For Expo 52+ and new architecture, migrate to TurboModules/codegen and avoid using createNativeModules.
+        // See https://reactnative.dev/docs/the-new-architecture-intro for migration steps.
         return Collections.singletonList(new RNAppodealModule(reactContext));
     }
 

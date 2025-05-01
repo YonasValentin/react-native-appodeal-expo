@@ -2,6 +2,7 @@
 #import "RNADefines.h"
 
 #import <React/RCTUtils.h>
+#import <React/RCTUtils.h>
 #import <StackConsentManager/StackConsentManager-Swift.h>
 
 

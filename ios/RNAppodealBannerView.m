@@ -10,6 +10,7 @@
 #import "RNADefines.h"
 
 #import <React/RCTLog.h>
+#import <React/RCTLog.h>
 #import <Appodeal/Appodeal.h>
 
 

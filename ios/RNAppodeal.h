@@ -1,6 +1,6 @@
 #import <Appodeal/Appodeal.h>
-#import <React/RCTBridgeModule.h>
-#import <React/RCTEventEmitter.h>
+#import "RCTBridgeModule.h"
+#import "RCTEventEmitter.h"
 
 
 @interface RNAppodeal : RCTEventEmitter <RCTBridgeModule>
