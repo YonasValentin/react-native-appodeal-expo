@@ -12,7 +12,7 @@ import {
   AppodealAdType,
   Appodeal,
   AppodealSdkEvent,
-} from 'react-native-appodeal';
+} from 'react-native-appodeal-expo';
 import {BannerShowStyle} from '../advertising';
 
 export const HomeScreen = () => {

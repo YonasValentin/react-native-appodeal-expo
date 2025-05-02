@@ -17,8 +17,7 @@ A modern, Expo-compatible React Native wrapper for the Appodeal SDK, supporting 
 ## Table of Contents
 
 - [Installation](#installation)
-- [iOS Setup](#ios-setup)
-- [Android Setup](#android-setup)
+- [Expo & Native Setup](#expo--native-setup)
 - [Usage](#usage)
 - [Consent & Privacy](#consent--privacy)
 - [Banner & MREC Components](#banner--mrec-components)
@@ -29,70 +28,41 @@ A modern, Expo-compatible React Native wrapper for the Appodeal SDK, supporting 
 
 ## Installation
 
-```sh
-npm install react-native-appodeal --save
-```
-
-> For beta versions, use:
->
-> ```sh
-> npm install react-native-appodeal@beta --save
-> ```
-
-If you use React Native < 0.60:
+Install this fork, **not** the original package:
 
 ```sh
-react-native link react-native-appodeal
+npm install react-native-appodeal-expo --save
 ```
+
+> This package is designed for Expo SDK 52+ and the new React Native architecture. It will not work with older Expo or React Native projects.
 
 ---
 
-## iOS Setup
+## Expo & Native Setup
 
-1. **Podfile**: In your `ios/Podfile`, add the required Appodeal pods. Example:
+### iOS
 
-```ruby
-use_frameworks! :linkage => :static # Required for Expo 52+
-pod 'Appodeal', '3.5.0'
-# ...add mediation/adapters as needed
-```
+- Minimum deployment target: **iOS 15.1+**
+- In your `ios/Podfile`, ensure you have:
+  ```ruby
+  use_frameworks! :linkage => :static
+  platform :ios, '15.1'
+  ```
+- Flipper is **not supported**. Remove any Flipper dependencies from your Podfile.
+- jcenter() is **not supported**.
+- After installing the package, run:
+  ```sh
+  cd ios && pod install
+  ```
+- Configure SKAdNetworkIds, App Transport Security, and any ad network keys (AdMob, Facebook, Firebase, etc) in your Info.plist as needed. See [Appodeal iOS docs](https://docs.appodeal.com/ios/get-started) for details.
+- Open `.xcworkspace` and run your app.
 
-2. **Install pods**:
+### Android
 
-```sh
-cd ios && pod install
-```
-
-3. **Info.plist**: Configure SKAdNetworkIds, App Transport Security, and any ad network keys (AdMob, Facebook, Firebase, etc). See [Appodeal iOS docs](https://docs.appodeal.com/ios/get-started).
-
-4. **Open** `.xcworkspace` and run your app.
-
----
-
-## Android Setup
-
-1. **Add Appodeal SDK**: In your app-level `build.gradle`:
-
-```groovy
-dependencies {
-    implementation 'com.appodeal.ads:sdk:3.5.0.0'
-    // ...other adapters as needed
-}
-```
-
-2. **Add Appodeal Maven repo**: In your project-level `build.gradle`:
-
-```groovy
-allprojects {
-    repositories {
-        maven { url "https://artifactory.appodeal.com/appodeal" }
-    }
-}
-```
-
-3. **Configure AdMob, Facebook, Firebase, etc** in your `AndroidManifest.xml` as needed. See [Appodeal Android docs](https://docs.appodeal.com/android/get-started).
-
-4. **Run your app**.
+- No manual linking required.
+- Make sure your project uses the new architecture and is compatible with Expo 52+.
+- Add any required configuration for AdMob, Facebook, Firebase, etc, in your `AndroidManifest.xml` as needed. See [Appodeal Android docs](https://docs.appodeal.com/android/get-started).
+- jcenter() is **not supported**.
 
 ---
 
@@ -101,7 +71,7 @@ allprojects {
 ### Initialization
 
 ```js
-import { Appodeal, AppodealAdType } from 'react-native-appodeal';
+import { Appodeal, AppodealAdType } from 'react-native-appodeal-expo';
 
 Appodeal.initialize(
   'YOUR_APPODEAL_KEY',
@@ -163,7 +133,7 @@ Appodeal.hide(AppodealAdType.BANNER_TOP);
 Appodeal handles consent automatically, but you can manage it manually:
 
 ```js
-import { Appodeal, AppodealConsentStatus } from 'react-native-appodeal';
+import { Appodeal, AppodealConsentStatus } from 'react-native-appodeal-expo';
 
 // Get consent status
 const status = Appodeal.consentStatus();
@@ -190,7 +160,7 @@ Appodeal.revokeConsent();
 ### Banner
 
 ```js
-import { AppodealBanner } from 'react-native-appodeal';
+import { AppodealBanner } from 'react-native-appodeal-expo';
 
 <AppodealBanner
   style={{ height: 50, width: '100%' }}
@@ -204,7 +174,7 @@ import { AppodealBanner } from 'react-native-appodeal';
 ### MREC
 
 ```js
-import { AppodealMrec } from 'react-native-appodeal';
+import { AppodealMrec } from 'react-native-appodeal-expo';
 
 <AppodealMrec
   style={{ height: 250, width: 300 }}

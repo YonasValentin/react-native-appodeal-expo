@@ -2,7 +2,7 @@
 import React from 'react';
 import {TouchableOpacity, View, Text, ScrollView} from 'react-native';
 import {styles} from '../../styles';
-import {AppodealAdType} from 'react-native-appodeal';
+import {AppodealAdType} from 'react-native-appodeal-expo';
 
 interface AutocacheControlProps {
   mask: number;

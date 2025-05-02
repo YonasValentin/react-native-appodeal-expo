@@ -1,6 +1,6 @@
 import React from 'react';
 import {BannerShowStyle, isViewBannerStyle} from '.';
-import {AppodealBanner, AppodealMrec} from 'react-native-appodeal';
+import {AppodealBanner, AppodealMrec} from 'react-native-appodeal-expo';
 import {styles} from '../styles';
 
 interface BannerViewProps {

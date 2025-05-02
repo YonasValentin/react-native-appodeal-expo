@@ -4,7 +4,7 @@ import {styles} from '../styles';
 import {ScrollView, SafeAreaView, View, Switch, Text} from 'react-native';
 import {Row, SectionHeader} from '../components';
 import SegmentedControl from '@react-native-community/segmented-control';
-import {Appodeal, AppodealConsentStatus} from 'react-native-appodeal';
+import {Appodeal, AppodealConsentStatus} from 'react-native-appodeal-expo';
 import {constants} from '../advertising/constants';
 
 let _smartBanners = true;

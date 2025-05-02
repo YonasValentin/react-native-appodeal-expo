@@ -5,7 +5,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {StatusBar} from 'react-native';
 import {HomeScreen} from './screens/HomeScreen';
 import {AdvancedFeaturesScreen} from './screens/AdvancedFeaturesScreen';
-import {Appodeal} from 'react-native-appodeal';
+import {Appodeal} from 'react-native-appodeal-expo';
 
 const Stack = createNativeStackNavigator();
 

@@ -1,6 +1,6 @@
 /* eslint-disable no-bitwise */
 import React from 'react';
-import {AppodealAdType, Appodeal} from 'react-native-appodeal';
+import {AppodealAdType, Appodeal} from 'react-native-appodeal-expo';
 import {View} from 'react-native';
 import {SectionHeader, Row} from '..';
 import {
